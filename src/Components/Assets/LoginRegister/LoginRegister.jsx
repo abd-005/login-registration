@@ -1,10 +1,18 @@
-import react from 'react'
+
+import React, { useState, useEffect } from 'react';
 import './LoginRegister.css'
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 
 const LoginRegister = () =>{
+    const [action, setAction] = useState('');
+    const registerLink = () => {
+        setAction('active');
+    };
+    const loginLink = () => {
+        setAction('');
+    };
     return(
-        <div className='wrapper'>
+        <div className={`wrapper${action}`}>
             <div className="form-box login">
                 <form action="">
                     <h1>Login</h1>
@@ -22,7 +30,7 @@ const LoginRegister = () =>{
                     <button type="submit">Login</button>
 
                     <div className="register-link">
-                        <p>Don't have an account? <a href="#">Register</a></p>
+                        <p>Don't have an account? <a href="#"onClick={registerLink}>Register</a></p>
                         
                     </div>
                 </form>
@@ -30,7 +38,7 @@ const LoginRegister = () =>{
             <div className="form-box registration">
                 <form action="">
                     <h1>Registration</h1>
-                    <div className='fullName'>
+                    {/* <div className='fullName'>
                         <div className="input-box firstName">
                         <input   type="text" placeholder='First Name' required/>
                         
@@ -39,7 +47,7 @@ const LoginRegister = () =>{
                         <input   type="text" placeholder='Last Name' required/>
                         
                     </div>
-                    </div>
+                    </div> */}
                     <div className="input-box">
                         <input   type="text" placeholder='Username' required/>
                         <FaUser className='icon'/>
@@ -57,7 +65,7 @@ const LoginRegister = () =>{
                     <button type="submit">Register</button>
 
                     <div className="register-link">
-                        <p>Already have an account? <a href="#">Login</a></p>
+                        <p>Already have an account? <a href="#" onClick={loginLink}>Login</a></p>
                         
                     </div>
                 </form>

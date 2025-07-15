@@ -14,10 +14,25 @@
     width: 100%;
     padding: 40px;
 }
+.wrapper.active .form-box.login {
+    transition: none;
+    translate: -400px;
+}
+.wrapper.active .form-box.registration{
+    transition: translate .18s ease;
+    /* transition: none; */
+    translate: 0;
+}
 .wrapper .form-box.registration{
     position: absolute;
-    translate: 400px;
+    /* transition: none; */
+    translate: 400px; 
 }
+
+/* .wrapper .form-box.login{
+    transition: translate .18s ease;
+    translate: 0;
+} */
 form h1{
     font-size: 36px;
     text-align: center;
