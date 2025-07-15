@@ -52,13 +52,12 @@ const LoginRegister = () =>{
                     <FaLock className='icon'/>
                     </div>
                     <div className="remember-forgot">
-                        <label><input type="checkbox"/>Remember me</label>
-                        <a href="#">Forgot Password?</a>
+                        <label><input type="checkbox"/>I agree to the terms and conditions</label>
                     </div>
-                    <button type="submit">Login</button>
+                    <button type="submit">Register</button>
 
                     <div className="register-link">
-                        <p>Don't have an account? <a href="#">Register</a></p>
+                        <p>Already have an account? <a href="#">Login</a></p>
                         
                     </div>
                 </form>

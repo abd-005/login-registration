@@ -7,10 +7,16 @@
     backdrop-filter: blur(20px);
     border-radius: 10px;
     color: #fff;
+    display: flex;
+    align-items: center;
 }
 .wrapper .form-box{
     width: 100%;
     padding: 40px;
+}
+.wrapper .form-box.registration{
+    position: absolute;
+    translate: 400px;
 }
 form h1{
     font-size: 36px;
