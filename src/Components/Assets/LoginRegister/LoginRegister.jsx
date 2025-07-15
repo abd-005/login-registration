@@ -1,12 +1,12 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './LoginRegister.css'
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 
 const LoginRegister = () =>{
     const [action, setAction] = useState('');
     const registerLink = () => {
-        setAction('active');
+        setAction(' active');
     };
     const loginLink = () => {
         setAction('');
@@ -38,16 +38,6 @@ const LoginRegister = () =>{
             <div className="form-box registration">
                 <form action="">
                     <h1>Registration</h1>
-                    {/* <div className='fullName'>
-                        <div className="input-box firstName">
-                        <input   type="text" placeholder='First Name' required/>
-                        
-                    </div>
-                    <div className="input-box lastName">
-                        <input   type="text" placeholder='Last Name' required/>
-                        
-                    </div>
-                    </div> */}
                     <div className="input-box">
                         <input   type="text" placeholder='Username' required/>
                         <FaUser className='icon'/>
